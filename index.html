@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#fbf4e7">
+  <meta name="description" content="श्री राम जानकी मंदिर, मै-राम कुटी, बरपरवा-कुंवरपुरा की आधिकारिक जानकारी और सेवा मंच।">
+  <title>श्री राम जानकी | मै-राम कुटी</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Noto+Serif+Devanagari:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <audio id="bellAudio" preload="auto" src="assets/temple-bell.wav"></audio>
+  <div class="intro" id="intro" aria-label="मंदिर में प्रवेश">
+    <span class="intro-particle"></span><span class="intro-particle"></span><span class="intro-particle"></span><span class="intro-particle"></span>
+    <div class="intro-content">
+      <div class="intro-mark">श्री राम जानकी · मै-राम कुटी</div>
+      <div class="bell-wrap" id="bellWrap">
+        <div class="bell-rope"></div>
+        <button class="bell-button" id="bellButton" aria-label="घंटी बजाकर मंदिर में प्रवेश करें">
+          <span class="bell-body"></span><span class="bell-lip"></span><span class="bell-clapper"></span>
+        </button>
+        <span class="intro-ripple" id="introRipple"></span>
+      </div>
+      <h1>घंटी बजाकर<br>मंदिर में प्रवेश करें</h1>
+      <p>एक शांत मन से दर्शन की शुरुआत करें</p>
+      <button class="skip-entry" id="skipEntry">बिना घंटी के प्रवेश करें</button>
+    </div>
+  </div>
+
+  <div class="site" id="site">
+    <div class="notice-bar"><strong>जय श्री राम</strong> · आपका अपना मंदिर, आपकी अपनी सेवा</div>
+    <header class="topbar">
+      <div class="shell topbar-inner">
+        <a class="brand" href="#home" aria-label="श्री राम जानकी मंदिर होम">
+          <span class="brand-seal">ॐ</span><span><span class="brand-name">श्री राम जानकी</span><span class="brand-place">मै-राम कुटी · बरपरवा-कुंवरपुरा</span></span>
+        </a>
+         <nav class="desktop-nav" aria-label="मुख्य नेविगेशन"><a href="#todayDarshan">दर्शन</a><a href="#notices">सूचना</a><a href="#sangath">परिवार</a><a href="#seva">सेवा निधि</a><a href="#gallery">झलक</a><a href="#location">स्थान</a></nav>
+        <button class="menu-btn" id="menuBtn" aria-label="मेन्यू खोलें" aria-expanded="false">☰</button>
+      </div>
+       <nav class="mobile-menu shell" id="mobileMenu" aria-label="मोबाइल नेविगेशन"><a href="#todayDarshan">🙏 आज का दर्शन</a><a href="#todayMessage">📜 आज का संदेश</a><a href="#notices">📢 सूचना</a><a href="#sangath">❤️ मंदिर परिवार</a><a href="#seva">💰 सेवा निधि</a><a href="#gallery">📸 मंदिर की झलक</a><a href="#location">📍 स्थान</a></nav>
+    </header>
+
+    <main id="home">
+      <section class="hero">
+        <div class="shell">
+          <div class="hero-grid">
+            <div class="hero-copy">
+              <span class="eyebrow">शुभ दर्शन</span>
+               <h1><span class="hero-welcome">🙏 श्री राम जानकी मंदिर में आपका स्वागत है</span></h1>
+              <div class="ornament">ॐ</div>
+              <p>मै-राम कुटी, बरपरवा-कुंवरपुरा से जुड़िए। दर्शन, सेवा और मंदिर की आवश्यक सूचनाएं अब एक ही स्थान पर।</p>
+               <div class="hero-actions"><a class="btn btn-primary" href="#todayDarshan">दर्शन करें <span>↗</span></a><a class="btn btn-secondary" href="#darshan">आज का कार्यक्रम</a></div>
+              <div class="hero-note"><span>✦</span><span>G7X5+3W9 · हरिहर पुरवा, उत्तर प्रदेश</span></div>
+            </div>
+            <div class="hero-art" aria-label="मंदिर के दर्शन">
+              <img class="hero-image" src="assets/asset-9.jpg" alt="श्री राम जानकी की प्रतिमा" fetchpriority="high">
+              <div class="hero-image-frame"><img src="assets/asset-1.jpg" alt="मंदिर में देवी की प्रतिमा" loading="lazy"></div>
+              <div class="hero-label"><b>✦</b><span>मन में भक्ति,<br>जीवन में शांति</span></div>
+            </div>
+          </div>
+          <div class="quick-grid" aria-label="त्वरित जानकारी">
+            <a class="quick-card" href="#darshan"><span class="quick-icon">🙏</span><span><strong>दैनिक दर्शन</strong><small>कार्यक्रम देखें</small></span></a>
+            <a class="quick-card" href="#seva"><span class="quick-icon">🪔</span><span><strong>मंदिर सेवा</strong><small>सहयोग करें</small></span></a>
+            <a class="quick-card" href="#live"><span class="quick-icon">◉</span><span><strong>बाबा से जुड़ें</strong><small>LIVE स्थिति</small></span></a>
+            <a class="quick-card" href="#location"><span class="quick-icon">⌖</span><span><strong>मंदिर का पता</strong><small>रास्ता देखें</small></span></a>
+          </div>
+        </div>
+      </section>
+
+       <section class="section section-morning" id="morning">
+         <div class="shell morning-card" data-reveal>
+           <div class="morning-art"><img id="morningImage" src="assets/asset-1.jpg" alt="प्रभात का मंदिर दर्शन" loading="lazy"><span class="sunrise-halo"></span><span class="diya-flame">🪔</span></div>
+           <div class="morning-copy"><span class="eyebrow">सुप्रभात</span><h2>सुप्रभात — आज का दर्शन</h2><p id="morningMessage">सुप्रभात। प्रभु का नाम लेकर आज का दिन प्रेम, धैर्य और भक्ति से शुरू करें।</p><a class="text-link" href="#todayDarshan">आज के दर्शन पर जाएं <span>↗</span></a></div>
+         </div>
+       </section>
+
+       <section class="section section-darshan-feature" id="todayDarshan">
+         <div class="shell darshan-feature" data-reveal>
+           <div class="darshan-photo"><img id="darshanImage" src="assets/asset-9.jpg" alt="आज के श्री राम जानकी दर्शन" loading="eager"><span class="darshan-photo-label">आज के दर्शन</span></div>
+           <div class="darshan-feature-copy"><span class="eyebrow">शुभ दर्शन</span><h2>आज के दर्शन 🪔</h2><p id="darshanMessage">आज श्री राम जानकी के दर्शन से मन में शांति और सेवा का संकल्प जगाएं।</p><a class="btn btn-primary" href="#gallery">दर्शन करें <span>↗</span></a></div>
+         </div>
+       </section>
+
+       <section class="section section-gallery" id="gallery">
+        <div class="shell">
+          <div class="section-heading"><div><span class="eyebrow">दर्शन की झलक</span><h2>मंदिर की झलक</h2></div><p>मंदिर, प्रतिमाओं और बाबा के कुछ स्नेहिल दर्शन। किसी चित्र पर टैप करके उसे बड़ा देखें।</p></div>
+          <div class="gallery-grid" data-reveal-group>
+            <button class="gallery-card gallery-main" data-lightbox="assets/asset-9.jpg" data-caption="श्री राम जानकी की प्रतिमा"><img src="assets/asset-9.jpg" alt="श्री राम जानकी की प्रतिमा" loading="lazy"><span>श्री राम जानकी</span></button>
+            <button class="gallery-card gallery-tall" data-lightbox="assets/asset-1.jpg" data-caption="मंदिर में देवी की प्रतिमा"><img src="assets/asset-1.jpg" alt="मंदिर में देवी की प्रतिमा" loading="lazy"><span>माँ का आशीर्वाद</span></button>
+            <button class="gallery-card" data-lightbox="assets/asset-2.jpg" data-caption="मंदिर में हनुमान जी"><img src="assets/asset-2.jpg" alt="मंदिर में हनुमान जी" loading="lazy"><span>हनुमान जी</span></button>
+            <button class="gallery-card" data-lightbox="assets/asset-7.jpg" data-caption="बाबा के दर्शन"><img src="assets/asset-7.jpg" alt="बाबा के दर्शन" loading="lazy"><span>बाबा के दर्शन</span></button>
+            <button class="gallery-card" data-lightbox="assets/asset-3.jpg" data-caption="मंदिर परिसर में बाबा"><img src="assets/asset-3.jpg" alt="मंदिर परिसर में बाबा" loading="lazy"><span>मंदिर परिसर</span></button>
+            <button class="gallery-card" data-lightbox="assets/asset-5.jpg" data-caption="देवी प्रतिमा का दर्शन"><img src="assets/asset-5.jpg" alt="देवी प्रतिमा का दर्शन" loading="lazy"><span>दिव्य दर्शन</span></button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-events" id="events">
+        <div class="shell">
+          <div class="section-heading"><div><span class="eyebrow">मिलकर मनाएं</span><h2>आगामी कार्यक्रम</h2></div><p>कार्यक्रमों की तिथियां समिति द्वारा जोड़े जाने के बाद यहां प्रकाशित होंगी।</p></div>
+          <div class="event-grid">
+            <article class="event-card event-poster card" data-reveal><div class="event-image"><img src="assets/asset-8.jpg" alt="श्री राम महायज्ञ 2026 पोस्टर" loading="lazy"><span class="event-date">पोस्टर</span></div><div class="event-body"><span class="pill">विशेष आयोजन</span><h3>श्री राम महायज्ञ 2026</h3><p>आयोजन का विस्तृत विवरण पोस्टर में देखें।</p><button class="text-link" data-lightbox="assets/asset-8.jpg" data-caption="श्री राम महायज्ञ 2026 का कार्यक्रम पोस्टर">पोस्टर खोलें <span>↗</span></button></div></article>
+            <article class="event-card empty-event card" data-reveal><div class="empty-icon">✦</div><div><span class="pill">जल्द ही</span><h3>नया कार्यक्रम यहां आएगा</h3><p>पूजा, आरती, भंडारा और धार्मिक आयोजनों की जानकारी समिति जोड़ सकती है।</p><button class="btn btn-secondary" type="button" id="eventReminder">सूचना मिलने पर बताएं</button></div></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-live" id="live">
+        <div class="shell">
+          <div class="live-card">
+            <div class="live-photo"><img src="assets/asset-7.jpg" alt="बाबा के दर्शन" loading="lazy"><span class="live-dot">●</span></div>
+             <div class="live-copy"><span class="eyebrow">सीधा जुड़ाव</span><h2>बाबा LIVE</h2><p id="liveMessage">जब live दर्शन उपलब्ध होंगे, समिति यहां link सक्रिय करेगी।</p><div class="live-status"><span class="status-dot" id="liveDot"></span><strong id="liveStatusTitle">बाबा अभी Live नहीं हैं</strong></div><a class="btn btn-secondary" id="liveButton" href="#" target="_blank" rel="noopener" aria-disabled="true">LIVE दर्शन जल्द</a></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-location" id="location">
+        <div class="shell location-grid">
+           <div class="location-copy"><span class="eyebrow">पधारिए</span><h2>मंदिर तक आएँ</h2><p>दर्शन के लिए आपका स्वागत है। नीचे दिए पते या Plus Code से सीधे रास्ता देखें।</p><div class="address-card"><span class="address-icon">⌖</span><div><strong>📍 Mai-Ram Kutee<br>(Barparwa-Kunwarpura)</strong><p>G7X5+3W9, Harihar Purwa,<br>Uttar Pradesh 273212</p></div></div><a class="btn btn-primary" href="https://www.google.com/maps/dir/?api=1&destination=G7X5%2B3W9%2C%20Harihar%20Purwa%2C%20Uttar%20Pradesh%20273212" target="_blank" rel="noopener">🧭 रास्ता देखें</a></div>
+          <div class="map-card"><div class="map-grid"></div><div class="map-pin">⌖</div><div class="map-label"><span>श्री राम जानकी</span><small>मै-राम कुटी</small></div><div class="plus-code">G7X5+3W9</div></div>
+        </div>
+      </section>
+
+       <section class="section section-contact" id="contact">
+         <div class="shell contact-card"><div><span class="eyebrow">सहायता चाहिए?</span><h2>संपर्क करें</h2><p>फोन नंबर, WhatsApp और समिति की जानकारी यहां जल्द जोड़ी जाएगी।</p></div><div class="contact-actions"><button class="btn btn-secondary" type="button" id="callButton">☎ संपर्क विवरण जल्द</button><button class="btn btn-secondary" type="button" id="whatsappButton">◌ WhatsApp जल्द</button></div></div>
+       </section>
+       <section class="section closing-section" id="closing">
+         <div class="shell closing-card" data-reveal><span class="closing-symbol">🙏</span><h2>फिर आइए — राम जानकी मंदिर आपका स्वागत करता है।</h2><button class="btn btn-primary" type="button" id="returnDarshan">फिर से दर्शन करें <span>↑</span></button></div>
+       </section>
+    </main>
+
+    <footer class="footer"><div class="shell footer-grid"><div><div class="brand"><span class="brand-seal">ॐ</span><span><span class="brand-name">श्री राम जानकी मंदिर</span><span class="brand-place">Mai-Ram Kutee · Barparwa-Kunwarpura</span></span></div><p class="footer-copy">भक्ति, सेवा और समुदाय से जुड़ने का अपना स्थान।</p></div><div class="footer-links"><a href="#home">होम</a><a href="#notices">सूचना</a><a href="#sangath">साथी</a><a href="#seva">सेवा निधि</a><a href="#location">स्थान</a></div></div><div class="shell footer-bottom"><span>जय श्री राम · जय बजरंगबली</span><span>Website built by Ankur Chauhan</span></div></footer>
+    <nav class="bottom-nav" aria-label="त्वरित मोबाइल नेविगेशन"><a href="#home"><span>⌂</span><small>होम</small></a><a href="#notices"><span>▣</span><small>सूचना</small></a><a class="bottom-seva" href="#seva"><span>✦</span><small>सेवा</small></a><a href="#gallery"><span>▧</span><small>झलक</small></a><a href="#location"><span>⌖</span><small>स्थान</small></a></nav>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="चित्र बड़ा देखें" aria-hidden="true"><button class="lightbox-close" id="lightboxClose" aria-label="बंद करें">×</button><button class="lightbox-prev" id="lightboxPrev" aria-label="पिछला चित्र">‹</button><figure><img id="lightboxImage" src="" alt=""><figcaption id="lightboxCaption"></figcaption></figure><button class="lightbox-next" id="lightboxNext" aria-label="अगला चित्र">›</button></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+
+      <section class="section section-darshan" id="darshan">
+        <div class="shell">
+          <div class="section-heading">
+            <div><span class="eyebrow">हर दिन का सहारा</span><h2>आज का मंदिर कार्यक्रम</h2></div>
+            <p>समय-सारणी समिति द्वारा जोड़ी जा सकती है। सही समय के लिए मंदिर से संपर्क करें।</p>
+          </div>
+          <div class="schedule-grid" data-reveal-group>
+            <article class="schedule-card" data-reveal><span class="schedule-icon">🌅</span><div><b>प्रातः आरती</b><small>समय जल्द जोड़ा जाएगा</small></div><span class="schedule-arrow">↗</span></article>
+            <article class="schedule-card" data-reveal><span class="schedule-icon">🪔</span><div><b>पूजा</b><small>समय जल्द जोड़ा जाएगा</small></div><span class="schedule-arrow">↗</span></article>
+            <article class="schedule-card" data-reveal><span class="schedule-icon">🙏</span><div><b>दर्शन</b><small>समय जल्द जोड़ा जाएगा</small></div><span class="schedule-arrow">↗</span></article>
+            <article class="schedule-card" data-reveal><span class="schedule-icon">🌙</span><div><b>संध्या आरती</b><small>समय जल्द जोड़ा जाएगा</small></div><span class="schedule-arrow">↗</span></article>
+          </div>
+          <div class="darshan-note"><span>✦</span><div><strong>आइए, रोज़ मंदिर में दर्शन करें</strong><p>मन को ठहरने का एक पल दें और भक्ति से जुड़ें।</p></div></div>
+        </div>
+      </section>
+
+       <section class="section section-message" id="todayMessage">
+         <div class="shell message-card" data-reveal><span class="message-sun">✦</span><div><span class="eyebrow">मन की बात</span><h2>आज का संदेश</h2><blockquote id="todayMessageBody">जहां भक्ति होती है, वहां मन को ठहरने का रास्ता मिल जाता है।</blockquote><cite id="todayMessageAuthor">— श्री राम जानकी मंदिर</cite></div></div>
+       </section>
+
+       <section class="section section-notices" id="notices">
+        <div class="shell">
+          <div class="section-heading"><div><span class="eyebrow">मंदिर से जुड़ी खबरें</span><h2>सूचना एवं आवश्यक जानकारी</h2></div><span class="pill">● नई सूचना</span></div>
+          <div class="notice-layout">
+            <article class="notice-feature card" data-reveal>
+              <div class="notice-feature-copy"><span class="notice-tag">विशेष आयोजन</span><h3>श्री राम महायज्ञ 2026</h3><p>आयोजन से जुड़ी तिथि, यात्रा और कार्यक्रम की पूरी जानकारी पोस्टर में दी गई है।</p><button class="text-link" data-lightbox="assets/asset-8.jpg" data-caption="श्री राम महायज्ञ 2026 का कार्यक्रम पोस्टर">पूरी जानकारी देखें <span>↗</span></button></div>
+              <button class="poster-trigger" data-lightbox="assets/asset-8.jpg" data-caption="श्री राम महायज्ञ 2026 का कार्यक्रम पोस्टर" aria-label="श्री राम महायज्ञ 2026 पोस्टर बड़ा देखें"><img src="assets/asset-8.jpg" alt="श्री राम महायज्ञ 2026 कार्यक्रम पोस्टर" loading="lazy"></button>
+            </article>
+            <div class="notice-list" data-reveal-group>
+              <article class="notice-row" data-reveal><span class="notice-symbol">📢</span><div><span class="notice-date">मंदिर सूचना</span><h3>नई सूचना यहां दिखाई देगी</h3><p>समिति की आवश्यक जानकारी प्रकाशित होने पर इस स्थान पर दिखेगी।</p></div><span class="notice-chevron">›</span></article>
+              <article class="notice-row" data-reveal><span class="notice-symbol green">✦</span><div><span class="notice-date">सेवा संदेश</span><h3>आप भी मंदिर सेवा से जुड़ें</h3><p>निर्णय और सेवा गतिविधियों में अपनी सहभागिता दर्ज करें।</p></div><span class="notice-chevron">›</span></article>
+           </div>
+         </div>
+       </div>
+       </section>
+
+      <section class="section section-sangath" id="sangath">
+        <div class="shell">
+           <div class="section-heading"><div><span class="eyebrow">मंदिर परिवार ❤️</span><h2>मंदिर परिवार ❤️</h2></div><p>मंदिर सेवा से जुड़े लोगों की जानकारी समिति द्वारा सम्मानपूर्वक जोड़ी जाएगी।</p></div>
+          <div class="companions-grid" id="companionsGrid"><div class="companions-empty"><span>✦</span><div><h3>साथियों की जानकारी जल्द यहां आएगी</h3><p>Admin panel से नाम, photo और छोटा परिचय जोड़ें।</p></div></div></div>
+        </div>
+      </section>
+
+       <section class="section section-community" id="community">
+        <div class="shell">
+          <div class="community-card">
+             <div class="community-copy"><span class="eyebrow">आपकी राय, मंदिर की दिशा</span><h2>समुदाय से जुड़िए</h2><p>मंदिर से जुड़े छोटे-बड़े निर्णयों में अपनी राय साझा करें। आपकी पसंद इस डिवाइस पर सुरक्षित रहती है।</p><div class="join-badge"><span>✦</span><span><strong id="joinCount">0</strong> श्रद्धालु इस निर्णय से जुड़े हैं</span></div></div>
+            <form class="decision-box" id="decisionForm"><span class="decision-label">आज का सामुदायिक प्रश्न</span><h3>क्या इस रविवार विशेष भंडारा रखा जाए?</h3><p>अपनी पसंद चुनें</p><div class="decision-options"><button type="button" class="decision-option" data-vote="yes"><span>हाँ</span><small>मैं सहमत हूँ</small></button><button type="button" class="decision-option" data-vote="no"><span>नहीं</span><small>अभी नहीं</small></button></div><div class="decision-result" id="decisionResult" aria-live="polite"></div><button class="join-link" type="button" id="joinButton">मैं भी जुड़ना चाहता/चाहती हूँ <span>↗</span></button></form>
+          </div>
+        </div>
+       </section>
+
+      <section class="section section-seva" id="seva">
+        <div class="shell">
+             <div class="section-heading"><div><span class="eyebrow">सेवा का अवसर</span><h2>मंदिर सेवा में आपका सहयोग</h2></div><p>मंदिर की सेवा एवं आवश्यक कार्यों के लिए अपना सहयोग प्रदान करें।</p></div>
+          <div class="fund-grid">
+            <div class="fund-copy">
+               <div class="fund-total"><span>अब तक एकत्रित सेवा निधि</span><strong id="donationTotal">₹ 0</strong><small>कुल राशि समिति द्वारा अद्यतन की जाएगी</small></div>
+              <p>आपका सहयोग मंदिर की देखभाल और आवश्यक सेवाओं में सहायक होगा। भुगतान के बाद कृपया समिति को सूचित करें।</p>
+              <div class="safe-note"><span>✓</span><span>व्यक्तिगत सहयोग राशि सार्वजनिक रूप से प्रदर्शित नहीं की जाएगी।</span></div>
+              <div class="upi-placeholder"><span>UPI ID</span><b>समिति द्वारा जोड़ा जाएगा</b></div>
+            </div>
+             <div class="qr-card card"><div class="qr-heading"><span>भक्ति से सहयोग</span><span class="upi-mark">पे</span></div><div class="qr-frame"><img src="assets/asset-6.jpg" alt="PhonePe से सहयोग करने के लिए QR कोड" loading="lazy"></div><strong>QR कोड स्कैन करके सहयोग करें</strong><small>PhonePe ऐप से भुगतान करें</small><div class="qr-footnote" id="anonymousNote">नाम गुप्त रखना चाहें तो समिति को बताएं</div><label class="anonymous-toggle"><input type="checkbox" id="anonymousToggle"><span>नाम गुप्त रखें</span></label></div>
+          </div>
+           <div class="supporters card" data-reveal><div><span class="eyebrow">कृतज्ञता</span><h3>❤️ सहयोग करने वाले</h3><p>सहयोगकर्ताओं के नाम, उनकी अनुमति के अनुसार, यहां सम्मानपूर्वक दिखाए जाएंगे।</p></div><div class="supporter-list" id="supporterList"><span class="supporter-chip">🙏 आपका नाम भी</span></div></div>
+        </div>
+       </section>
+  </div>
+
+    <script src="app.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>मंदिर प्रबंधन | श्री राम जानकी</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Noto+Serif+Devanagari:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body class="admin-body">
+  <main class="admin-shell">
+    <section class="login-card" id="loginView">
+      <a class="admin-brand" href="/"><span>ॐ</span><span><strong>श्री राम जानकी</strong><small>मंदिर प्रबंधन</small></span></a>
+      <div class="admin-kicker">सुरक्षित समिति प्रवेश</div>
+      <h1>Admin panel में प्रवेश करें</h1>
+      <p>यह क्षेत्र केवल Main Admin और अधिकृत Admin के लिए है।</p>
+      <form id="loginForm" class="admin-form">
+         <label>Private Login ID<input type="text" name="identifier" inputmode="tel" autocomplete="username" placeholder="Phone number या email" required></label>
+        <label>Password<input type="password" name="password" autocomplete="current-password" required></label>
+        <button class="admin-btn primary" type="submit">सुरक्षित login</button>
+        <div class="form-message" id="loginMessage" aria-live="polite"></div>
+      </form>
+      <a class="back-link" href="/">← मुख्य वेबसाइट पर वापस जाएं</a>
+    </section>
+
+    <section id="appView" hidden>
+      <header class="admin-header">
+        <a class="admin-brand" href="/"><span>ॐ</span><span><strong>श्री राम जानकी</strong><small>मंदिर प्रबंधन</small></span></a>
+        <div class="admin-user"><span id="userLabel"></span><button class="admin-btn subtle" id="logoutButton" type="button">Logout</button></div>
+      </header>
+      <div class="admin-welcome"><div><span class="admin-kicker">समिति dashboard</span><h1>मंदिर की जानकारी संभालें</h1><p>यहां किए गए बदलाव public website पर automatically दिखाई देंगे।</p></div><a class="admin-btn subtle" href="/" target="_blank" rel="noopener">Website देखें ↗</a></div>
+      <div class="stats-grid" id="statsGrid"></div>
+       <nav class="admin-tabs" aria-label="Management sections"><button class="active" data-tab="notices">सूचना</button><button data-tab="settings">Site content</button><button data-tab="companions">मंदिर परिवार</button><button data-tab="gallery">Photos</button><button data-tab="users" id="usersTab">Admins</button></nav>
+
+       <section class="admin-panel active" data-panel="notices">
+        <div class="panel-heading"><div><span class="admin-kicker">Publish और edit</span><h2>सूचना प्रबंधन</h2></div><button class="admin-btn subtle" data-reset="noticeForm" type="button">नई सूचना</button></div>
+        <form class="editor-form" id="noticeForm"><input type="hidden" name="id"><label>शीर्षक<input name="title" maxlength="160" required></label><label>विवरण<textarea name="body" rows="4" maxlength="2000" required></textarea></label><div class="form-grid"><label>तारीख / label<input name="date" maxlength="40" placeholder="जैसे: मंदिर सूचना"></label><label class="check-label"><input type="checkbox" name="important"> महत्वपूर्ण सूचना</label><label class="check-label"><input type="checkbox" name="published" checked> Website पर प्रकाशित</label></div><button class="admin-btn primary" type="submit">सूचना सुरक्षित करें</button><div class="form-message" data-message="noticeForm"></div></form>
+        <div class="record-list" id="noticeList"></div>
+      </section>
+
+       <section class="admin-panel" data-panel="companions" hidden>
+        <div class="panel-heading"><div><span class="admin-kicker">नाम और परिचय</span><h2>मंदिर से जुड़े हमारे साथी</h2></div></div>
+        <form class="editor-form" id="companionForm" enctype="multipart/form-data"><input type="hidden" name="id"><label>नाम<input name="name" maxlength="120" required></label><label>छोटा role / परिचय<input name="role" maxlength="160" placeholder="जैसे: सेवा सहयोगी" required></label><label>विवरण<textarea name="bio" rows="3" maxlength="500"></textarea></label><label>Photo<input type="file" name="photo" accept="image/jpeg,image/png,image/webp"></label><button class="admin-btn primary" type="submit">साथी जोड़ें / update करें</button><div class="form-message" data-message="companionForm"></div></form>
+        <div class="record-list" id="companionList"></div>
+       </section>
+
+       <section class="admin-panel" data-panel="settings" hidden>
+         <div class="panel-heading"><div><span class="admin-kicker">Public website content</span><h2>मुख्य मंदिर सामग्री</h2></div></div>
+         <p class="security-note">यहां के बदलाव public website पर तुरंत दिखाई देंगे। Donation में केवल कुल राशि और प्रकाशित donor names रखे जाते हैं; किसी व्यक्ति की contribution amount store या public नहीं होती।</p>
+         <form class="editor-form content-editor" id="settingsForm" enctype="multipart/form-data">
+           <div class="content-editor-block"><h3>आज के दर्शन</h3><label>Darshan photo<input type="file" name="darshanImage" accept="image/jpeg,image/png,image/webp"></label><label>Darshan message<textarea name="darshanMessage" rows="3" maxlength="1000" required></textarea></label></div>
+           <div class="content-editor-block"><h3>सुप्रभात</h3><label>Morning photo<input type="file" name="morningImage" accept="image/jpeg,image/png,image/webp"></label><label>Morning message<textarea name="morningMessage" rows="3" maxlength="1000" required></textarea></label></div>
+           <div class="content-editor-block"><h3>आज का संदेश</h3><label>Message<textarea name="todayMessage" rows="3" maxlength="1000" required></textarea></label><label>Author / source<input name="todayMessageAuthor" maxlength="120"></label></div>
+           <div class="content-editor-block"><h3>सेवा निधि</h3><label>Public total amount (₹)<input type="number" name="donationTotal" min="0" max="999999999999" step="1" required></label></div>
+           <div class="content-editor-block"><h3>बाबा LIVE</h3><label class="check-label"><input type="checkbox" name="liveActive"> बाबा अभी LIVE हैं</label><label>Live title<input name="liveTitle" maxlength="160"></label><label>Live message<textarea name="liveMessage" rows="2" maxlength="500"></textarea></label><label>Live link (https://...)<input type="url" name="liveUrl" maxlength="500" placeholder="https://"></label></div>
+           <button class="admin-btn primary" type="submit">Public content save करें</button><div class="form-message" data-message="settingsForm"></div>
+         </form>
+         <div class="content-editor-block donor-manager"><div class="panel-heading"><div><span class="admin-kicker">Public names only</span><h3>❤️ सहयोग करने वाले</h3></div></div><form class="editor-form compact-form" id="donorForm"><input type="hidden" name="id"><label>Donor name<input name="name" maxlength="120" required></label><label class="check-label"><input type="checkbox" name="published" checked> Website पर दिखाएं</label><button class="admin-btn primary" type="submit">Donor save करें</button><div class="form-message" data-message="donorForm"></div></form><div class="record-list" id="donorList"></div></div>
+       </section>
+
+       <section class="admin-panel" data-panel="gallery" hidden>
+        <div class="panel-heading"><div><span class="admin-kicker">नई झलक</span><h2>Gallery photos</h2></div></div>
+         <form class="editor-form" id="galleryForm" enctype="multipart/form-data"><input type="hidden" name="id"><label>Photo<input type="file" name="image" accept="image/jpeg,image/png,image/webp" required></label><label>Caption<input name="caption" maxlength="180" placeholder="जैसे: संध्या आरती" required></label><label>Category<input name="category" maxlength="80" value="मंदिर"></label><label class="check-label"><input type="checkbox" name="published" checked> Website पर दिखाएं</label><button class="admin-btn primary" type="submit">Photo save करें</button><div class="form-message" data-message="galleryForm"></div></form>
+        <div class="record-list gallery-records" id="galleryList"></div>
+      </section>
+
+      <section class="admin-panel" data-panel="users" hidden>
+        <div class="panel-heading"><div><span class="admin-kicker">Trusted access</span><h2>Admin accounts</h2></div></div>
+         <p class="security-note">Main Admin कभी remove नहीं किया जा सकता। केवल owner या `manage admins` permission वाला Admin नए Admin जोड़ या remove कर सकता है। Phone number/login ID केवल private admin login के लिए है; public website पर नहीं दिखता और password नहीं है।</p>
+         <form class="editor-form" id="userForm"><label>नाम<input name="name" maxlength="120" required></label><label>Private login ID<input type="text" name="identifier" inputmode="tel" maxlength="160" placeholder="Phone number या email" required></label><label>Temporary password<input type="password" name="password" minlength="12" autocomplete="new-password" required></label><label class="check-label"><input type="checkbox" name="canManageAdmins"> यह Admin नए Admin manage कर सकता है</label><button class="admin-btn primary" type="submit">Admin जोड़ें</button><div class="form-message" data-message="userForm"></div></form>
+        <div class="record-list" id="userList"></div>
+      </section>
+    </section>
+  </main>
+  <div class="admin-toast" id="adminToast" role="status" aria-live="polite"></div>
+  <script src="admin.js"></script>
+</body>
+</html>
