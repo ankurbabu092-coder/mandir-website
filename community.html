@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#536b54">
+  <meta name="description" content="श्री राम जानकी मंदिर का भक्त परिवार समुदाय।">
+  <title>भक्त परिवार | श्री राम जानकी मंदिर</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Noto+Serif+Devanagari:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="community.css">
+</head>
+<body>
+  <header class="community-header">
+    <div class="community-shell header-inner">
+      <a class="community-brand" href="/"><span class="brand-seal">ॐ</span><span><strong>श्री राम जानकी मंदिर</strong><small>माई राम कुटी न्यास · बरपारवा</small></span></a>
+      <a class="back-link" href="/">← मुख्य दर्शन</a>
+    </div>
+  </header>
+
+  <main class="community-shell">
+    <section class="community-hero">
+      <div><span class="eyebrow">🙏 सम्मानपूर्ण संगत</span><h1>भक्त परिवार</h1><p>अपने चुने हुए नाम से जुड़ें, भक्ति संदेश साझा करें और मंदिर से जुड़े लोगों के साथ विनम्र संगत बनाएं। Phone, login ID और निजी credentials कभी सार्वजनिक नहीं होते।</p></div>
+      <a class="whatsapp-button" href="https://chat.whatsapp.com/CL1EnOQ1e5p4kCyxJFawoA" target="_blank" rel="noopener noreferrer">💚 WhatsApp भक्त समूह से जुड़ें</a>
+    </section>
+
+    <section class="community-stats" aria-label="भक्त परिवार के आंकड़े">
+      <div><strong id="memberCount">0</strong><span>कुल भक्त</span></div>
+      <div><strong id="connectedCount">0</strong><span>आपके connections</span></div>
+      <div><strong id="todayVisitorCount">0</strong><span>आज के दर्शन</span></div>
+    </section>
+
+    <section class="profile-panel panel" id="profilePanel">
+      <div class="panel-heading"><div><span class="eyebrow">आपका छोटा परिचय</span><h2>पहले अपना public नाम बनाएं</h2></div><span class="privacy-pill">🔒 निजी जानकारी नहीं</span></div>
+      <p class="panel-copy">यहां वही नाम लिखें जिसे आप भक्त परिवार में दिखाना चाहते हैं। आप अपना परिचय बाद में बदल सकते हैं।</p>
+      <form id="profileForm" class="community-form">
+        <label>आपका चुना हुआ नाम<input id="profileName" name="displayName" maxlength="60" required placeholder="जैसे: राम भक्त सीमा"></label>
+        <label>छोटा परिचय <span class="optional">वैकल्पिक</span><textarea id="profileBio" name="bio" maxlength="180" rows="2" placeholder="जैसे: रोज़ सुबह दर्शन से जुड़ती हूं।"></textarea></label>
+        <button class="community-button primary" type="submit">भक्त परिवार में जुड़ें <span>↗</span></button>
+        <div class="form-message" id="profileMessage" aria-live="polite"></div>
+      </form>
+    </section>
+
+    <section class="community-layout">
+      <div class="community-main">
+        <section class="panel composer-panel" id="composerPanel" hidden>
+          <div class="panel-heading"><div><span class="eyebrow">आपकी बात</span><h2>एक भक्ति संदेश लिखें</h2></div><span class="online-label">● आप सक्रिय हैं</span></div>
+          <form id="postForm" class="community-form"><textarea id="postBody" name="body" maxlength="1000" rows="3" placeholder="आज मन में कौन सा भक्ति भाव है?"></textarea><div class="form-row"><small>सम्मानपूर्ण और सरल भाषा रखें।</small><button class="community-button primary" type="submit">संदेश साझा करें</button></div><div class="form-message" id="postMessage" aria-live="polite"></div></form>
+        </section>
+        <section class="feed-section"><div class="section-title"><div><span class="eyebrow">साझा भक्ति</span><h2>भक्तों के संदेश</h2></div><span class="soft-label">नवीनतम पहले</span></div><div id="postFeed" class="post-feed"><div class="loading-card">भक्त परिवार लोड हो रहा है…</div></div></section>
+      </div>
+
+      <aside class="community-side">
+        <section class="panel requests-panel"><div class="section-title"><div><span class="eyebrow">मित्रता और संगत</span><h2>Connect requests</h2></div></div><div id="requestList" class="request-list"><p class="empty-copy">आपके requests यहां दिखाई देंगे।</p></div></section>
+        <section class="panel members-panel"><div class="section-title"><div><span class="eyebrow">सभी की संगत</span><h2>भक्तों से जुड़ें</h2></div></div><div id="memberList" class="member-list"><p class="empty-copy">भक्त profiles लोड हो रहे हैं…</p></div></section>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="community-footer"><div class="community-shell"><span>जय श्री राम · सेवा और संगत</span><span>Built with श्रद्धा • Ankur Chauhan</span></div></footer>
+  <div class="community-toast" id="communityToast" role="status" aria-live="polite"></div>
+  <script src="community.js"></script>
+</body>
+</html>
