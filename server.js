@@ -16,8 +16,13 @@ const rateLimit = require("express-rate-limit");
 const { GoogleGenAI } = require("@google/genai");
 
 const ROOT = __dirname;
-const DATA_DIR = path.join(ROOT, "data");
-const UPLOAD_DIR = path.join(ROOT, "uploads");
+const DATA_DIR = path.resolve(
+  process.env.DATA_DIR || path.join(ROOT, "data")
+);
+
+const UPLOAD_DIR = path.resolve(
+  process.env.UPLOAD_DIR || path.join(ROOT, "uploads")
+);
 const PORT = Number(process.env.PORT || 5500);
 const IS_PRODUCTION = process.env.NODE_ENV === "production";
 const COOKIE_NAME = "temple_admin_token";
